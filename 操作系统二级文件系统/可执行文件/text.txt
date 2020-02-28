@@ -1,0 +1,14 @@
+fformat
+mkdir /bin
+mkdir /etc
+mkdir /dev
+mkdir /home
+mkdir /home/photos
+mkdir /home/texts
+mkdir /home/reports
+mkdir /test
+fcreat /test/Jerry
+fopen /test/Jerry
+fwrite 800
+flseek 500
+fread 20

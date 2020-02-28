@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/home"
+        android:title="主页" />
+
+    <item
+        android:id="@+id/navigation_recipes"
+        android:icon="@drawable/recipes"
+        android:title="食谱" />
+
+    <item
+    android:id="@+id/navigation_taboo"
+    android:icon="@drawable/taboo"
+    android:title="相性" />
+
+    <item
+        android:id="@+id/navigation_forum"
+        android:icon="@drawable/forum"
+        android:title="社区" />
+</menu>

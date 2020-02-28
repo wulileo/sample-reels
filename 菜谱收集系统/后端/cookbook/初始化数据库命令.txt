@@ -1,0 +1,30 @@
+drop database if exists cookboook;
+create database cookbook;
+use cookbook;
+
+drop table if exists food_relation;
+create table food_relation(
+food1_name char(10),
+food2_name char(10),
+relation char(4),
+reason text
+);
+system cp /DengHong/cookbook/food_relation.csv /var/lib/mysql-files/
+system chmod o+r /var/lib/mysql-files/food_relation.csv
+system ls -ld /var/lib/mysql-files/food_relation.csv
+load data infile "/var/lib/mysql-files/food_relation.csv" into table food_relation fields terminated by ",";
+
+
+drop table if exists foodbook;
+create table foodbook(
+foodname char(12),
+meteraial text,
+method text
+);
+system cp /DengHong/cookbook/foodbook.csv /var/lib/mysql-files/
+system chmod o+r /var/lib/mysql-files/foodbook.csv
+system ls -ld /var/lib/mysql-files/foodbook.csv
+load data infile "/var/lib/mysql-files/foodbook.csv" into table foodbook fields terminated by ",";
+
+SELECT TABLE_NAME,COLUMN_NAME,DATA_TYPE,COLUMN_COMMENT FROM INFORMATION_SCHEMA.COLUMNS
+WHERE TABLE_SCHEMA = 'cookbook';

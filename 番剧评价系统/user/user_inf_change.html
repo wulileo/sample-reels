@@ -1,0 +1,150 @@
+<html>
+	<head>
+		<title>1652250 | 邓泓</title>
+	</head>
+	
+	<body style="
+				background-image: url(../pic/bg1.jpg);
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-color: #000000;">
+		<label style="
+					position:absolute;
+					top:20px;
+					left:500px;
+					color:rgba(255,255,255,0.7);
+					font-size:60px;
+					font-family:'楷书';
+					font-weight:bolder;">用户修改信息</label>
+		<script>
+			function GetQueryString(name)
+			{
+				 var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+				 var r = window.location.search.substr(1).match(reg);
+				 if(r!=null)return  unescape(r[2]); return null;
+			}
+			function sendfrom(){
+				document.Form.action = "./user_inf_change.php?name="+GetQueryString("name");
+				document.Form.submit();
+			}
+		</script>
+	
+		
+	
+	<div style="
+				position:absolute;
+				left:200px;
+				height:520px;
+				width:300px;
+				top:200px;
+				background-color:rgba(255,255,255,0.7);
+				border: solid 1px #000000;
+				-moz-box-shadow:2px 2px 5px #000000; 
+				-webkit-box-shadow:2px 2px 5px #000000; 
+				box-shadow: 3px 12px 25px #000000;
+				border-radius: 30px;
+				border-radius-left,top,bottom,right;">
+		<form name="Form" action="" method="POST">
+			<h1 style="
+					position:absolute;
+					top:60px;
+					left:88px;">修改信息</h1>
+			<label style="
+						position:absolute;
+						top:170px;
+						left:30px;">密码</label>
+			<input style="
+						border: solid 1px #000000;
+						-moz-box-shadow:2px 2px 5px #000000; 
+						-webkit-box-shadow:2px 2px 5px #000000; 
+						box-shadow: 1px 3px 5px #000000;
+						border-radius: 5px;
+						border-radius-left,top,bottom,right;
+						position:absolute;
+						top:170px;
+						left:100px;"
+				type="password" name="password1" size="20" maxlength="16" placeholder="请填写密码">
+			
+			<label style="
+						position:absolute;
+						top:220px;
+						left:30px;">密码</label>
+			<input style="
+						border: solid 1px #000000;
+						-moz-box-shadow:2px 2px 5px #000000; 
+						-webkit-box-shadow:2px 2px 5px #000000; 
+						box-shadow: 1px 3px 5px #000000;
+						border-radius: 5px;
+						border-radius-left,top,bottom,right;
+						position:absolute;
+						top:220px;
+						left:100px;"
+				type="password" name="password2" size="20" maxlength="16" placeholder="请再次填写密码">
+			
+			<label style="
+						position:absolute;
+						top:270px;
+						left:30px;">邮箱</label>
+			<input style="
+						border: solid 1px #000000;
+						-moz-box-shadow:2px 2px 5px #000000; 
+						-webkit-box-shadow:2px 2px 5px #000000; 
+						box-shadow: 1px 3px 5px #000000;
+						border-radius: 5px;
+						border-radius-left,top,bottom,right;
+						position:absolute;
+						top:270px;
+						left:100px;"
+				type="text" name="email" size="20" maxlength="30" placeholder="请填写邮箱">
+			<input style="
+						border: solid 1px #000000;
+						-moz-box-shadow:2px 2px 5px #000000; 
+						-webkit-box-shadow:2px 2px 5px #000000; 
+						box-shadow: 1px 3px 5px #000000;
+						border-radius: 5px;
+						border-radius-left,top,bottom,right;
+						position:absolute;
+						top:330px;
+						left:80px;
+						width:130px;
+						height:50px;
+						background: transparent;
+						cursor:pointer;
+						font-size:25px;
+						font-family: '黑体';
+						font-weight:bolder;"
+				onmouseover="this.style.backgroundColor='#000000';
+							this.style.color='rgba(255,255,255,1)';
+							this.style.fontSize='40px'"
+				onmouseout="this.style.backgroundColor='rgba(255,255,255,0)';
+							this.style.color='#000000';
+							this.style.fontSize='25px'"
+				type="button" name="confirm" value="确定" onClick="sendfrom()">
+			<input style="
+						border: solid 1px #000000;
+						-moz-box-shadow:2px 2px 5px #000000; 
+						-webkit-box-shadow:2px 2px 5px #000000; 
+						box-shadow: 1px 3px 5px #000000;
+						border-radius: 5px;
+						border-radius-left,top,bottom,right;
+						position:absolute;
+						top:400px;
+						left:200px;
+						width:50px;
+						height:30px;
+						background: transparent;
+						cursor:pointer;
+						font-size:12px;
+						font-family: '黑体';"
+				onmouseover="this.style.backgroundColor='#000000';
+							this.style.color='rgba(255,255,255,1)';
+							this.style.fontSize='18px'"
+				onmouseout="this.style.backgroundColor='rgba(255,255,255,0)';
+							this.style.color='#000000';
+							this.style.fontSize='12px'"
+				type="button" onclick="window.location.href='user_home.php?name='+GetQueryString('name')" value="返回">
+		</form>
+	</div>
+	</body>
+</html>

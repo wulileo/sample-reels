@@ -1,0 +1,107 @@
+<html>
+	<head>
+		<title>1652250 | 邓泓</title>
+	</head>
+	
+	<body style="
+				background-image: url(../pic/bg2.jpg);
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-color: #000000;">
+		<h1 style="
+				position:absolute;
+				top:0px;
+				left:200px;
+				color:rgba(0,0,0,0.7);
+				font-size:60px;
+				font-family:'楷书';
+				font-weight:bolder;">管理员修改密码</h1>
+		<script>
+			function GetQueryString(name)
+			{
+				 var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+				 var r = window.location.search.substr(1).match(reg);
+				 if(r!=null)return  unescape(r[2]); return null;
+			}
+			function sendfrom(){
+				document.Form.action = "./ad_inf_change.php?s_no="+GetQueryString("s_no");
+				document.Form.submit();
+			}
+		</script>
+	<div style="
+				position:absolute;
+				left:200px;
+				height:520px;
+				width:300px;
+				top:200px;
+				background-color:rgba(0,0,0,0.7);
+				border: solid 1px #000000;
+				-moz-box-shadow:2px 2px 5px #000000; 
+				-webkit-box-shadow:2px 2px 5px #000000; 
+				box-shadow: 3px 12px 25px #000000;
+				border-radius: 30px;
+				border-radius-left,top,bottom,right;">
+		<br>
+		<form name="Form" action="" method="POST">
+			<label style="
+						color:#FFFFFF;
+						position:absolute;
+						top:130px;
+						left:30px;">密码</label>
+			<input style="
+						position:absolute;
+						top:130px;
+						left:100px;"
+				type="password" name="password1" size="20" maxlength="16" placeholder="请填写密码">
+			<label style="
+						color:#FFFFFF;
+						position:absolute;
+						top:220px;
+						left:30px;">密码</label>
+			<input style="
+						position:absolute;
+						top:220px;
+						left:100px;"
+				type="password" name="password2" size="20" maxlength="16" placeholder="请再次填写密码">
+			<input style="
+						color:#FFFFFF;
+						position:absolute;
+						top:330px;
+						left:90px;
+						width:130px;
+						height:50px;
+						background: transparent;
+						cursor:pointer;
+						font-size:25px;
+						font-family: '黑体';
+						font-weight:bolder;"
+				onmouseover="this.style.backgroundColor='#FFFFFF';
+							this.style.color='rgba(0,0,0,0.7)';
+							this.style.fontSize='40px'"
+				onmouseout="this.style.backgroundColor='rgba(0,0,0,0)';
+							this.style.color='#FFFFFF';
+							this.style.fontSize='25px'"
+				type="button" name="confirm" value="确定" onClick="sendfrom()">
+			<input style="
+						color:#FFFFFF;
+						position:absolute;
+						top:430px;
+						left:150px;
+						width:100px;
+						height:30px;
+						background: transparent;
+						cursor:pointer;
+						font-size:12px;
+						font-family: '黑体';"
+				onmouseover="this.style.backgroundColor='#FFFFFF';
+							this.style.color='rgba(0,0,0,0.7)';
+							this.style.fontSize='18px'"
+				onmouseout="this.style.backgroundColor='rgba(0,0,0,0)';
+							this.style.color='#FFFFFF';
+							this.style.fontSize='12px'"
+					type="button" onclick="window.location.href='ad_home.php?s_no='+GetQueryString('s_no')" value="返回主页">
+		</form>
+	</div>
+	</body>
+</html>

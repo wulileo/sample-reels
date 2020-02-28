@@ -1,0 +1,137 @@
+<html>
+	<head>
+		<title>1652250 | 邓泓</title>
+		<style>
+		</style>
+	</head>
+	<script>
+			function GetQueryString(name)
+			{
+				 var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+				 var r = window.location.search.substr(1).match(reg);
+				 if(r!=null)return  unescape(r[2]); return null;
+			}
+			function sendfrom(){
+				document.Form.action = "user_msg.php?name="+GetQueryString("name");
+				document.Form.submit();
+			}
+	</script>
+	<body style="
+				background-image: url(../pic/bg1.jpg);
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-color: #000000;">
+				
+		<label style="
+				position:absolute;
+				top:10px;
+				left:500px;
+				color:rgba(255,255,255,0.7);
+				font-size:60px;
+				font-family:'楷书';
+				font-weight:bolder;">留言及反馈</label>
+	<div style="
+				position:absolute;
+				left:10px;
+				height:70px;
+				width:220px;
+				top:30px;
+				background-color:rgba(255,255,255,0.7);
+				border: solid 1px #000000;
+				-moz-box-shadow:2px 2px 5px #000000; 
+				-webkit-box-shadow:2px 2px 5px #000000; 
+				box-shadow: 3px 12px 25px #000000;
+				border-radius: 10px;
+				border-radius-left,top,bottom,right;">
+		<input style="
+						border: solid 1px #000000;
+						-moz-box-shadow:2px 2px 5px #000000; 
+						-webkit-box-shadow:2px 2px 5px #000000; 
+						box-shadow: 1px 3px 5px #000000;
+						border-radius: 5px;
+						border-radius-left,top,bottom,right;
+						position:absolute;
+						top:10px;
+						left:10px;
+						width:200px;
+						height:50px;
+						background: transparent;
+						cursor:pointer;
+						font-size:25px;
+						font-family: '黑体';
+						font-weight:bolder;"
+				onmouseover="this.style.backgroundColor='#000000';
+							this.style.color='rgba(255,255,255,1)'"
+				onmouseout="this.style.backgroundColor='rgba(255,255,255,0)';
+							this.style.color='#000000'"
+			type="button" onclick="window.location.href='user_home.php?name='+GetQueryString('name')" value="返回主页">
+	</div>
+	<form name="Form" action="" method="POST">
+		<div style="
+				position:absolute;
+				left:10px;
+				height:560px;
+				width:600px;
+				top:110px;
+				padding: 10px;
+				background-color:rgba(255,255,255,0.7);
+				border: solid 1px #000000;
+				-moz-box-shadow:2px 2px 5px #000000; 
+				-webkit-box-shadow:2px 2px 5px #000000; 
+				box-shadow: 3px 12px 25px #000000;
+				border-radius: 10px;
+				border-radius-left,top,bottom,right;">
+			<label style="
+						font-size:40px;
+						font-weight:bolder;">留言内容：</label>
+			<br>
+			<textarea style="
+						border: solid 1px #000000;
+						-moz-box-shadow:2px 2px 5px #000000; 
+						-webkit-box-shadow:2px 2px 5px #000000; 
+						box-shadow: 1px 3px 5px #000000;
+						border-radius: 5px;
+						border-radius-left,top,bottom,right;
+						background:transparent;"
+						name="contend" rows="30" cols="80"></textarea>
+		</div>
+		<div style="
+				position:absolute;
+				left:10px;
+				height:70px;
+				width:220px;
+				top:700px;
+				background-color:rgba(255,255,255,0.7);
+				border: solid 1px #000000;
+				-moz-box-shadow:2px 2px 5px #000000; 
+				-webkit-box-shadow:2px 2px 5px #000000; 
+				box-shadow: 3px 12px 25px #000000;
+				border-radius: 10px;
+				border-radius-left,top,bottom,right;">
+			<input style="
+						border: solid 1px #000000;
+						-moz-box-shadow:2px 2px 5px #000000; 
+						-webkit-box-shadow:2px 2px 5px #000000; 
+						box-shadow: 1px 3px 5px #000000;
+						border-radius: 5px;
+						border-radius-left,top,bottom,right;
+						position:absolute;
+						top:10px;
+						left:10px;
+						width:200px;
+						height:50px;
+						background: transparent;
+						cursor:pointer;
+						font-size:25px;
+						font-family: '黑体';
+						font-weight:bolder;"
+				onmouseover="this.style.backgroundColor='#000000';
+							this.style.color='rgba(255,255,255,1)'"
+				onmouseout="this.style.backgroundColor='rgba(255,255,255,0)';
+							this.style.color='#000000'"
+				type="button" name="comfirm" value="确定" onClick="sendfrom()">
+		</div>
+	</form>
+	</body>
+</html>

@@ -1,0 +1,54 @@
+drop database if exists evaluation;
+create database evaluation;
+use evaluation;
+
+create table if not exists user_information(
+name char(16) not null,
+psd char(32) not null,
+email char(30),
+primary key(name)
+);
+
+drop table super_information;
+create table if not exists super_information(
+s_no int not null,
+s_psd char(32),
+primary key(s_no)
+);
+
+create table if not exists f_information(
+f_no int not null,
+f_name char(16) not null,
+f_time date not null,
+f_sig1 char(6),
+f_sig2 char(6),
+f_sig3 char(6),
+f_comp char(30),
+f_view text,
+primary key(f_no)
+);
+
+drop table m_information;
+create table if not exists m_information(
+m_no int not null,
+name char(16),
+m_time date not null,
+m_com text not null,
+m_deal char(30) not null,
+primary key(m_no)
+);
+
+drop table u_f_evaluation;
+create table if not exists u_f_evaluation(
+name char(16) not null,
+f_no int not null,
+eva text not null,
+grade int
+);
+
+select * from user_information;
+select * from super_information;
+select * from f_information;
+select * from m_information;
+select * from u_f_evaluation;
+load data infile "/var/lib/mysql-files/f_information.csv" into table f_information fields terminated by ",";
